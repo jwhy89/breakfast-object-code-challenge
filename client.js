@@ -17,12 +17,30 @@ let refrigeratorContents  = {
 
 function breakfastChecker(contents) {
   // Your code goes here
-
+  // Create if conditional to look through values
+ if (contents.pancakeMixBags > )
 
 
 
 
 }
+
+// figure out how much of ingredients are need per person
+let mealOne = {
+  eggs: 2,
+  baconStrips: 3,
+}
+console.log(mealOne);
+
+let mealTwo = {
+  chocChipPancake: 3
+}
+console.log(mealTwo);
+
+let pancakeBatch = 10; // number of pancakes per mix
+let pancake = 15; // number of choc chips per pancake
+
+let eaters = 4;
 
 // Your function should return 'yes' or 'no'
 console.log('Does the pantry have enough food for breakfast?', breakfastChecker(pantryContents));
