@@ -17,18 +17,20 @@ let refrigeratorContents  = {
 
 function breakfastChecker(contents) {
   // Your code goes here
+  for ( let checker of contents ) {
   // Create if conditional to look through values
- if (contents.pancakeMixBags > )
+  if ( eaters * mealTwo.chocChipPancake >= ( checker.pancakeMixBags / pancakeBatch ) * ( checker.chocolateChips / pancake ) ) {
+    return true;
 
 
-
-
-}
+  } else {
+    return false;}// end for loop
+} // end breakfastChecker function
 
 // figure out how much of ingredients are need per person
 let mealOne = {
   eggs: 2,
-  baconStrips: 3,
+  baconStrips: 3
 }
 console.log(mealOne);
 
