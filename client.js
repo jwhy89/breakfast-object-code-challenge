@@ -1,6 +1,6 @@
 let pantryContents  = {
-  pancakeMixBags: 1,
-  chocolateChips: 20,
+  pancakeMixBags: 2,
+  chocolateChips: 180,
 };
 
 let refrigeratorContents  = {
@@ -35,16 +35,14 @@ let eaters = 4;
 // breakfast checker function
 function breakfastChecker(contents) {
   // Your code goes here
-  if (eaters * mealTwo.chocChipPancake <= makePancake(contents))
-    return true;
+  if (makePancake(contents) === 0)
+    return false;
 
-  // Create if conditional to look through values
-  else if (makePancake(contents) === 0) {
-    return false;
+  // Create if conditional to look
+  else if (eaters * mealTwo.chocChipPancake <= makePancake(contents)) {
+    return true;
   }
-  else if (eaters * mealTwo.chocChipPancake === 0 ) {
-    return false;
-  }
+
   else {
   return false;
   }
