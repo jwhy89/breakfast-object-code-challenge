@@ -55,11 +55,12 @@ function makePancake(contents) {
   let enoughChocChips = contents.chocolateChips / pancake;
   let maxPancakes = 0;
   if ( makePancakeBatch <= enoughChocChips ) {
-    return makePancakeBatch;
+    let maxPancakes = makePancakeBatch;
+    return maxPancakes
   }
 
   else if ( makePancakeBatch > enoughChocChips) {
-    return enoughChocChips;
+    let maxPancakes = enoughChocChips;
   }
   return maxPancakes
 } //end make pancake function
