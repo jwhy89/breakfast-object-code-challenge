@@ -35,13 +35,12 @@ let eaters = 4;
 // breakfast checker function
 function breakfastChecker(contents) {
   // Your code goes here
-//  for ( let checker of contents ) {
-  let checker = contents
+
   // Create if conditional to look through values
-  if ( eaters * mealTwo.chocChipPancake >= ( checker.pancakeMixBags * pancakeBatch ) * ( checker.chocolateChips / pancake ) ) {
+  if ( eaters * mealTwo.chocChipPancake <= makePancake(contents) ) {
     return true;
   }
-  else if (0 >= (checker.pancakeMixBags / pancakeBatch) * (checker.chocolateChips / pancake)) {
+  else if ((eaters * mealTwo.chocChipPancake <= makePancake(contents)) = 0 ) {
 
 
   } else {
@@ -49,7 +48,20 @@ function breakfastChecker(contents) {
 } // end for loop
 //}  end breakfastChecker function
 
+// function to create pancake
+function makePancake(contents) {
+  let contents.pancakeMixBags * pancakeBatch = makePancakeBatch;
+  let contents.chocolateChips / pancake = enoughChocChips;
+  let maxPancakes = 0;
+  if ( makePancakeBatch <= enoughChocChips ) {
+    let maxPancakes = makePancakeBatch;
+  }
 
+  else if ( makePancakeBatch > enoughChocChips) {
+    let maxPancakes = enoughChocChips;
+  }
+  return maxPancakes
+} //end make pancake function
 
 // Your function should return 'yes' or 'no'
 console.log('Does the pantry have enough food for breakfast?', breakfastChecker(pantryContents));
