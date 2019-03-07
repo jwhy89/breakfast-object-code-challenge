@@ -22,6 +22,7 @@ let mealOne = {
 }
 console.log(mealOne);
 
+// number of choc chips pancakes needed per person
 let mealTwo = {
   chocChipPancake: 3
 }
@@ -35,14 +36,17 @@ let eaters = 4;
 // breakfast checker function
 function breakfastChecker(contents) {
   // Your code goes here
+  
+  // If state if no ingredients are available
   if (makePancake(contents) === 0)
     return false;
 
-  // Create if conditional to look
+  // Create if conditional to make sure total pancakes need are me
   else if (eaters * mealTwo.chocChipPancake <= makePancake(contents)) {
     return true;
   }
 
+  // need this else statement so that you don't get undefined after calculations
   else {
   return false;
   }
