@@ -35,30 +35,31 @@ let eaters = 4;
 // breakfast checker function
 function breakfastChecker(contents) {
   // Your code goes here
-
-  // Create if conditional to look through values
-  if ( eaters * mealTwo.chocChipPancake <= makePancake(contents) ) {
+  if (eaters * mealTwo.chocChipPancake <= makePancake(contents))
     return true;
+  // Create if conditional to look through values
+  else if (makePancake(contents) === 0) {
+    return false;
   }
-  else if ((eaters * mealTwo.chocChipPancake <= makePancake(contents)) = 0 ) {
-
-
-  } else {
-    return false;}
-} // end for loop
-//}  end breakfastChecker function
+  else if (eaters * mealTwo.chocChipPancake === 0 ) {
+    return false;
+  }
+  else {
+  return false;
+  }
+}//}  end breakfastChecker function
 
 // function to create pancake
 function makePancake(contents) {
-  let contents.pancakeMixBags * pancakeBatch = makePancakeBatch;
-  let contents.chocolateChips / pancake = enoughChocChips;
+  let makePancakeBatch = contents.pancakeMixBags * pancakeBatch;
+  let enoughChocChips = contents.chocolateChips / pancake;
   let maxPancakes = 0;
   if ( makePancakeBatch <= enoughChocChips ) {
-    let maxPancakes = makePancakeBatch;
+    return makePancakeBatch;
   }
 
   else if ( makePancakeBatch > enoughChocChips) {
-    let maxPancakes = enoughChocChips;
+    return enoughChocChips;
   }
   return maxPancakes
 } //end make pancake function
