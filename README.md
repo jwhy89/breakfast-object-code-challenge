@@ -1,4 +1,4 @@
-# Breakfast Object Objections
+# Breakfast Object Code Challenge (updated 190519)
 
 You are responsible for making breakfast for a group of 4 picky eaters. If you can't feed them, you will have to go out to eat. Ideally, you want to eat at home (it's less expensive), but you'd rather go out to eat than listen to them whine.
 
@@ -21,3 +21,41 @@ Be sure to change the values in the objects to test your function in multiple co
 ## Stretch
 
 The picky eaters might invite some picky friends, but you won't know until seconds before you have to make a decision. Allow the function to accept a second parameter - the total number of picky eaters - to allow you to make the calculation at the last second.
+
+## Built With
+
+- JavaScript
+- Node.js
+- HTML
+
+## Getting Started
+
+These instructions will get you a copy of the code challenge solution and run it on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Link to software that is required before you attempt to start the app (e.g. node, mongo).
+
+- [Node.js](https://nodejs.org/en/)
+
+### Installing
+
+Steps to test the solution.
+
+1. Download this project.
+2. In terminal, navigate to your project folder and type `node client.js`
+3. You should see that Node.js has ran the `client.js` file and will display the console log scripts.
+4. Feel free to update the variables in pantryContents, refrigeratorContents, and eaters to come up with other test conditions.
+
+### Completed Features
+
+- [x] Set up variables for each condition outlined in the code challenge.
+- [x] Set up an eater's varable for the stretch goal.
+
+### Next Steps
+
+- [ ] Create a client.test.js file to further test.
+
+## Authors
+
+* Jarvis Yang

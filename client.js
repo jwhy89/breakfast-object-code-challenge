@@ -14,6 +14,9 @@ let refrigeratorContents  = {
   onions: 1,
 };
 
+// variable for the current number of eaters
+let eaters = 4;
+
 // You shouldn't need to change anything above this line initially
 // You may change it to test different scenarios, but it should work as is
 
@@ -33,9 +36,6 @@ let pancakeBatch = 10;
 
 // number of choc chips per pancake
 let chocChipPerPancake = 15;
-
-// variable for the current number of eaters
-let eaters = 4;
 
 // breakfast checker function
 function breakfastChecker(contents) {
