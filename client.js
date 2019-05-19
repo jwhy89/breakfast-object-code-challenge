@@ -22,56 +22,88 @@ let mealOne = {
   eggs: 2,
   baconStrips: 3
 }
-console.log(mealOne);
 
 // number of choc chips pancakes needed per person
 let mealTwo = {
   chocChipPancake: 3
 }
-console.log(mealTwo);
 
 // number of pancakes per mix
 let pancakeBatch = 10;
 
 // number of choc chips per pancake
-let pancake = 15;
+let chocChipPerPancake = 15;
 
 // variable for the current number of eaters
 let eaters = 4;
 
 // breakfast checker function
 function breakfastChecker(contents) {
-  // return false if no ingredients are available
-  if (makePancake(contents) === 0)
-    return false;
-
-  // Create if conditional to make sure total pancakes need are me
-  else if (eaters * mealTwo.chocChipPancake <= makePancake(contents)) {
-    return true;
+  // Create if conditional to make sure total pancakes available will be enough for all eaters
+  console.log('in breakfastChecker function, total complete pancake meals:', makePancakes(contents));
+  console.log('in breakfastChecker function, total complete eggs and bacon meals:', makeEggsAndBacon(contents));
+  
+  if (eaters * mealTwo.chocChipPancake <= makePancakes(contents)) {
+    return 'Yes';
   }
+
+   // Create if conditional to make sure total pancakes available will be enough for all eaters
+   else if (eaters <= makeEggsAndBacon(contents)) {
+    return 'Yes';
+  }
+
+  // return false if no ingredients are available
+  else if (makePancakes(contents) === 0 || makeEggsAndBacon(contents) === 0)
+    return 'No';
 
   // need this else statement so that you don't get undefined after calculations
   else {
-    return false;
+    return 'No';
   }
-}//}  end breakfastChecker function
 
-// function to create pancake
-function makePancake(contents) {
-  let makePancakeBatch = contents.pancakeMixBags * pancakeBatch;
-  let enoughChocChips = contents.chocolateChips / pancake;
+//  end breakfastChecker function
+}
+
+// function to create max pancake meals
+function makePancakes(contents) {
+  let makePancakeBatch = Math.floor(contents.pancakeMixBags * pancakeBatch);
+  let enoughChocChips = Math.floor(contents.chocolateChips / chocChipPerPancake);
 
   if ( makePancakeBatch <= enoughChocChips ) {
-    console.log(makePancakeBatch);
+    // console.log('total amount of pancakes you can make based off mix bags', makePancakeBatch);
     return makePancakeBatch;
   }
 
-  if ( makePancakeBatch > enoughChocChips) {
-    console.log(enoughChocChips);
+  else if ( makePancakeBatch > enoughChocChips) {
+    // console.log('total amount of pancakes you can make based off choc chips', enoughChocChips);
     return enoughChocChips;
   }
 
-//end make pancake function
+  else {
+    return 0;
+  }
+//end makePancakes function
+}
+
+// function to create total amount of eggs and bacon meals with current contents
+function makeEggsAndBacon(contents) {
+  let eggMeals = Math.floor(contents.eggs / mealOne.eggs);
+  let baconMeals = Math.floor(contents.baconStrips / mealOne.baconStrips);
+
+  if ( eggMeals <= baconMeals ) {
+    // console.log('total meals based off eggs:', eggMeals);
+    return eggMeals;
+  }
+
+  else if ( eggMeals > baconMeals) {
+    // console.log('total meals based off bacon:', baconMeals);
+    return baconMeals;
+  }
+
+  else {
+    return 0;
+  }
+//end makeEggsAndBacon function
 }
 
 // Your function should return 'yes' or 'no'
