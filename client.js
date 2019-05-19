@@ -1,8 +1,10 @@
+// Current items in the pantry
 let pantryContents  = {
-  pancakeMixBags: 2,
-  chocolateChips: 180,
+  pancakeMixBags: 1,
+  chocolateChips: 20,
 };
 
+// Current items in the refrigerator
 let refrigeratorContents  = {
   eggs: 4,
   baconStrips: 8,
@@ -15,7 +17,7 @@ let refrigeratorContents  = {
 // You shouldn't need to change anything above this line initially
 // You may change it to test different scenarios, but it should work as is
 
-// figure out how much of ingredients are need per person
+// figure out how much of ingredients are needed per person
 let mealOne = {
   eggs: 2,
   baconStrips: 3
@@ -28,16 +30,18 @@ let mealTwo = {
 }
 console.log(mealTwo);
 
-let pancakeBatch = 10; // number of pancakes per mix
-let pancake = 15; // number of choc chips per pancake
+// number of pancakes per mix
+let pancakeBatch = 10;
 
+// number of choc chips per pancake
+let pancake = 15;
+
+// variable for the current number of eaters
 let eaters = 4;
 
 // breakfast checker function
 function breakfastChecker(contents) {
-  // Your code goes here
-  
-  // If state if no ingredients are available
+  // return false if no ingredients are available
   if (makePancake(contents) === 0)
     return false;
 
@@ -48,7 +52,7 @@ function breakfastChecker(contents) {
 
   // need this else statement so that you don't get undefined after calculations
   else {
-  return false;
+    return false;
   }
 }//}  end breakfastChecker function
 
@@ -56,7 +60,6 @@ function breakfastChecker(contents) {
 function makePancake(contents) {
   let makePancakeBatch = contents.pancakeMixBags * pancakeBatch;
   let enoughChocChips = contents.chocolateChips / pancake;
-//  let maxPancakes= 1;
 
   if ( makePancakeBatch <= enoughChocChips ) {
     console.log(makePancakeBatch);
@@ -68,7 +71,8 @@ function makePancake(contents) {
     return enoughChocChips;
   }
 
-} //end make pancake function
+//end make pancake function
+}
 
 // Your function should return 'yes' or 'no'
 console.log('Does the pantry have enough food for breakfast?', breakfastChecker(pantryContents));
